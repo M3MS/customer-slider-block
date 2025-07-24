@@ -3,14 +3,14 @@
 /**
  *  Customer Slider block
  *
- * @package dixa
+ * @package mytheme
  */
 
-namespace Dixa\ACF\FieldGroups\Blocks\Sections\CustomerSlider;
+namespace MyTheme\ACF\FieldGroups\Blocks\Sections\CustomerSlider;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use Dixa\ACF\FieldGroups\Helper;
-use Dixa\Helper\Template;
+use MyTheme\ACF\FieldGroups\Helper;
+use MyTheme\Helper\Template;
 
 use WP_Query;
 
