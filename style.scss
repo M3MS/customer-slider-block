@@ -1,0 +1,99 @@
+.customer-slider {
+    color: $white;
+    overflow: hidden;
+
+    .inner {
+        padding: 80px 20px 40px;
+
+        @include media-breakpoint-up(xl) {
+            padding: 0 80px 0;
+        }
+    }
+
+    .customer-item {
+        overflow: hidden;
+
+        figure {
+            blockquote {
+                position: relative;
+                padding: 0;
+                border: none;
+
+                svg {
+                    display: block;
+                    width: 40px;
+                    position: absolute;
+                    top: -50px;
+                    left: 0;
+                }
+            }
+
+            figcaption {
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        picture {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            bottom: -17px;
+            right: -40px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .glide {
+
+        &__bullet {
+            position: relative;
+            border: 0;
+            overflow: hidden;
+            max-width: 200px;
+            background-color: rgba($white, 0.2);
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                opacity: 0;
+                transform: translateX(-100%);
+                background-color: rgba($white, 0.4);
+                transition: transform 5.4s linear, opacity 0.2s linear;
+            }
+
+            .logo {
+                display: block;
+                width: 100%;
+                height: 50px;
+                object-fit: contain;
+                filter: grayscale(0%) invert(100%) brightness(2);
+
+                @include media-breakpoint-up(lg) {
+                    height: 70px;
+                }
+            }
+        }
+
+        &__bullet--active {
+            &::before {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+
+}
